@@ -144,22 +144,28 @@ paths:
                   type: "string"
                 data:
                   type: "object"
-  /products/{id}:
-    get:
-      description: "Get a product by id, authenticated by token returned upon succesful login"
-      summary: "Get Product By Id"
-      operationId: "GetProductById"
+    post:
+      description: "create new product"
+      summary: "Create Product"
+      operationId: "AddProduct"
       consumes:
       - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "id"
-        in: "path"
-        description: "id of product"
+      - name: "Authorization"
+        in: "header"
+        description: "authentication token"
         required: true
         schema:
-          type: "integer"
+          type: "object"
+      parameters:
+      - name: "product details"
+        in: "body"
+        description: "product details"
+        required: true
+        schema:
+          type: "object"
       responses:
           "200":
             description: "Success"
@@ -179,28 +185,22 @@ paths:
                   type: "string"
                 data:
                   type: "object"
-  /products:
-    post:
-      description: "create new product"
-      summary: "Create Product"
-      operationId: "AddProduct"
+  /products/{id}:
+    get:
+      description: "Get a product by id, authenticated by token returned upon succesful login"
+      summary: "Get Product By Id"
+      operationId: "GetProductById"
       consumes:
       - "application/json"
       produces:
       - "application/json"
       parameters:
-      - name: "Authorization"
-        in: "header"
-        description: "authentication token"
+      - name: "id"
+        in: "path"
+        description: "id of product"
         required: true
         schema:
-          type: "object"
-      - name: "product details"
-        in: "body"
-        description: "product details"
-        required: true
-        schema:
-          type: "object"
+          type: "integer"
       responses:
           "200":
             description: "Success"
