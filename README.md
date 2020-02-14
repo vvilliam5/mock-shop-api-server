@@ -38,11 +38,6 @@
 ## About The Project
 An API server authenticated with JWT, users can sign up and sign in, view products, add products to cart, view cart and delete products from cart. Admins can manage products(view, add, edit and delete). All routes are restricted by authentication using JWT, the token is returned upon successful login by the user, the user then accesses these endpoints using this token. SO its important to login first before accessing the endpoints. the only endpoint that isnt restricted is the get users endpoint, to help in testing
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`vvilliam5`, `mock-shop-api-server`, `twitter_handle`, `email`
-
-
 ### Built With
 
 * [nodejs]
