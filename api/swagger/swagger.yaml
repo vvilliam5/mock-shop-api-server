@@ -91,6 +91,7 @@ paths:
         required: true
         schema:
           type: "object"
+          example: "{'firstName':'Jurgen', 'lastName': 'Klopp', 'email':'klopp@gmail.com', 'password':'admin123', 'isAdmin': 'false'}"
       responses:
           "200":
             description: "Success"
@@ -132,6 +133,7 @@ paths:
         required: true
         schema:
           type: "object"
+          example: "Bearer token"
       responses:
           "200":
             description: "Success"
@@ -300,6 +302,7 @@ paths:
         required: true
         schema:
           type: "object"
+          example: "{'name':'Lenonvo X360', 'description':'Flexible Laptop','category','Laptops','price':350000,imgUrl: '', inStock: true}"
       responses:
           "200":
             description: "Success"

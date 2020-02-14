@@ -132,7 +132,8 @@
                         "description": "signup details to create new account, email must not have been used",
                         "required": true,
                         "schema": {
-                            "type": "object"
+                            "type": "object",
+                            "example": "{'firstName':'Jurgen', 'lastName': 'Klopp', 'email':'klopp@gmail.com', 'password':'admin123', 'isAdmin': 'false'}"
                         }
                     }
                 ],
@@ -195,7 +196,8 @@
                         "description": "authentication token",
                         "required": true,
                         "schema": {
-                            "type": "object"
+                            "type": "object",
+                            "example": "Bearer token"
                         }
                     }
                 ],
@@ -452,7 +454,8 @@
                         "description": "product details",
                         "required": true,
                         "schema": {
-                            "type": "object"
+                            "type": "object",
+                            "example": "{'name':'Lenonvo X360', 'description':'Flexible Laptop','category','Laptops','price':350000,imgUrl: '', inStock: true}"
                         }
                     }
                 ],
