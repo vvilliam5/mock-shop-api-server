@@ -9,11 +9,11 @@ router.get('/', db.viewAll)
 //sign up
 router.post('/signup', db.signUp)
 //login
-router.post('/login', db.login) 
+router.post('/login', db.login)
 //view all products in cart
 router.get('/:id/cart', auth.verifyBoth, cartDB.viewCart)
 //add product to cart
-router.post('/:id/cart', auth.verifyBoth, cartDB.addToCart)
+router.post('/:id/cart/:pID', auth.verifyBoth, cartDB.addToCart)
 //delete product from cart
 router.delete('/:id/cart/:pID', auth.verifyBoth, cartDB.deleteProductFromCart)
 module.exports = router;

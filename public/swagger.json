@@ -228,7 +228,9 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/users/{id}/cart/{pID}": {
             "post": {
                 "description": "Add Product to users cart",
                 "summary": "Add product to cart",
@@ -241,12 +243,21 @@
                 ],
                 "parameters": [
                     {
-                        "name": "cart details",
-                        "in": "body",
-                        "description": "details of item to be added to cart, user id and product id",
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of user",
                         "required": true,
                         "schema": {
-                            "type": "object"
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "pID",
+                        "in": "path",
+                        "description": "id of product",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
                         }
                     },
                     {
@@ -289,9 +300,7 @@
                         }
                     }
                 }
-            }
-        },
-        "/users/{id}/cart/{pID}": {
+            },
             "delete": {
                 "description": "delete a product from cart",
                 "summary": "Delete Product from Cart By Id",

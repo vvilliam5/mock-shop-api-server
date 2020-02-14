@@ -16,8 +16,8 @@ const viewCart = async (request, response) => {
 //add product to cart
 const addToCart = async (request, response) => {
     try {
-        let { productID } = request.body;
         let userID = request.params.id
+        let productID = request.params.pID;
         const cart = await model.Cart.create({
             productID,
             userID
