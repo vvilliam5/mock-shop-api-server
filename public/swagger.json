@@ -180,7 +180,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "authentication",
+                        "name": "Authorization",
                         "in": "header",
                         "description": "authentication token",
                         "required": true,
