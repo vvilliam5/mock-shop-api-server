@@ -110,3 +110,4 @@ Project Link: [https://github.com/vvilliam5/mock-shop-api-server](https://github
 ## Acknowledgements
 
 * [jwt]()
+* [sequelize]()
