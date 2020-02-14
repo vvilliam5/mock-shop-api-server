@@ -159,7 +159,6 @@ paths:
         required: true
         schema:
           type: "object"
-      parameters:
       - name: "product details"
         in: "body"
         description: "product details"
@@ -201,6 +200,12 @@ paths:
         required: true
         schema:
           type: "integer"
+      - name: "Authorization"
+        in: "header"
+        description: "authentication token"
+        required: true
+        schema:
+          type: "object"
       responses:
           "200":
             description: "Success"

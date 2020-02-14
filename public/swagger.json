@@ -239,6 +239,15 @@
                         "schema": {
                             "type": "object"
                         }
+                    },
+                    {
+                        "name": "product details",
+                        "in": "body",
+                        "description": "product details",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
                     }
                 ],
                 "responses": {
@@ -292,6 +301,15 @@
                         "required": true,
                         "schema": {
                             "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "authentication token",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
                         }
                     }
                 ],
