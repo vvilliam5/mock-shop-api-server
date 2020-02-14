@@ -55,6 +55,7 @@ paths:
         required: true
         schema:
           type: "object"
+          example: "{'email':'admin@gmail.com','password':'admin123'}"
       responses:
           "200":
             description: "Success"

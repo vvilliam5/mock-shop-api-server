@@ -77,7 +77,8 @@
                         "description": "login details, email and password, this returns the authentication token",
                         "required": true,
                         "schema": {
-                            "type": "object"
+                            "type": "object",
+                            "example": "{'email':'admin@gmail.com','password':'admin123'}"
                         }
                     }
                 ],
