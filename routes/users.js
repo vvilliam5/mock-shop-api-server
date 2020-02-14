@@ -9,7 +9,7 @@ router.get('/', db.viewAll)
 //sign up
 router.post('/signup', db.signUp)
 //login
-router.post('/login', db.login)
+router.post('/login', db.login) 
 //view all products in cart
 router.get('/:id/cart', auth.verifyBoth, cartDB.viewCart)
 //add product to cart

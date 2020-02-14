@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "mock-shop-api-server"
+host: "https://mock-shop-api.herokuapp.com"
+basePath: /
+schemes:
+  - "https"
+  - "http"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  /users:
+    get:
+      description: "Get list of all users and admins in the system"
+      summary: "Get Users"
+      operationId: "GetUsers"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+          "200":
+            description: "Success"
+            schema:
+              type: "object"
+              properties:
+                status:
+                  type: "string"
+                data:
+                  type: "object"
+          "401":
+            description: "Error Bad Request"
+            schema:
+              type: "object"
+              properties:
+                status:
+                  type: "string"
+                data:
+                  type: "object"
+      
