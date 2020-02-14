@@ -2,15 +2,14 @@ swagger: "2.0"
 info:
   version: "1.0.0"
   title: "mock-shop-api-server"
-host: "https://mock-shop-api.herokuapp.com"
+host: "mock-shop-api.herokuapp.com"
 basePath: /
 schemes:
-  - "https"
-  - "http"
+- "https"
 consumes:
-  - "application/json"
+- "application/json"
 produces:
-  - "application/json"
+- "application/json"
 paths:
   /users:
     get:
@@ -18,9 +17,9 @@ paths:
       summary: "Get Users"
       operationId: "GetUsers"
       consumes:
-        - "application/json"
+      - "application/json"
       produces:
-        - "application/json"
+      - "application/json"
       responses:
           "200":
             description: "Success"
@@ -40,4 +39,31 @@ paths:
                   type: "string"
                 data:
                   type: "object"
-      
+  /users/login:
+    post:
+      description: "Sign in with email and password to get token for authorization"
+      summary: "Sign In"
+      operationId: "SignIn"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+          "200":
+            description: "Success"
+            schema:
+              type: "object"
+              properties:
+                status:
+                  type: "string"
+                data:
+                  type: "object"
+          "401":
+            description: "Error Bad Request"
+            schema:
+              type: "object"
+              properties:
+                status:
+                  type: "string"
+                data:
+                  type: "object"
